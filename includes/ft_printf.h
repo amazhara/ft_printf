@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrazas <vbrazas@student.unit.ua>          +#+  +:+       +#+        */
+/*   By: amazhara <amazhara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/09 14:16:54 by amazhara          #+#    #+#             */
-/*   Updated: 2018/12/26 17:19:23 by vbrazas          ###   ########.fr       */
+/*   Updated: 2019/04/25 16:07:11 by amazhara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct		s_printf
 
 }					t_printf;
 
+int					ft_printf(const char *str, ...);
 int					pars_and_process(const char *str, t_printf *p
 , va_list *ap, int i);
 int					width_star(t_printf *p, va_list ap, int i);

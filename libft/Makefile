@@ -6,7 +6,7 @@
 #    By: amazhara <amazhara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/26 17:31:26 by amazhara          #+#    #+#              #
-#    Updated: 2019/04/22 18:00:23 by amazhara         ###   ########.fr        #
+#    Updated: 2019/04/25 16:43:25 by amazhara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ IFLAGS :=	-I .
 LIB :=		$(LIB_PATH)libft.a
 HFILES :=	libft
 FILES := 	ft_itoa ft_strcpy ft_strncpy ft_strcat ft_strncat ft_strlcat \
-			ft_strdel ft_strclr ft_strmap ft_strmapi ft_strnjoin \
+			ft_strdel ft_strclr ft_strmap ft_strmapi ft_strnjoin ft_isnum \
 			ft_strequ ft_strnequ ft_strsub ft_strjoin ft_strtrim strchr_count \
 			ft_strchr ft_strsplit ft_strrchr ft_strstr ft_strnstr ft_strcmp \
 			ft_strncmp ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
@@ -31,7 +31,7 @@ FILES := 	ft_itoa ft_strcpy ft_strncpy ft_strcat ft_strncat ft_strlcat \
 			ft_memmove ft_memchr ft_memcmp ft_memalloc ft_memdel ft_strnew \
 			ft_strpbrk ft_sqrt ft_strnpbrk ft_swap get_next_line ft_intlen \
 			ft_itoa_base ft_uintlen ft_double_malloc ft_double_free ft_modul \
-			ft_swap ft_strdup ft_strlen ft_atoi ft_strndup
+			ft_swap ft_strdup ft_strlen ft_atoi ft_strndup ft_array
 
 HDRS :=		$(addsuffix .h, $(HFILES))
 SRCS :=		$(addsuffix .c, $(FILES))

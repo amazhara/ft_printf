@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amazhara <amazhara@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: amazhara <amazhara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 14:25:06 by amazhara          #+#    #+#             */
-/*   Updated: 2019/01/30 18:10:37 by amazhara         ###   ########.fr       */
+/*   Updated: 2019/04/25 16:42:53 by amazhara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,22 @@
 typedef __int128_t	t_bzero_padd;
 
 int					ft_printf(const char *str, ...);
+
+/*
+******************								******************
+******************			Ft_array			******************
+******************								******************
+*/
+
+typedef struct		s_array
+{
+	void			**arr;
+	ssize_t			len;
+	ssize_t			max;
+}					t_array;
+
+void				*new_array(size_t amount);
+void				*push_array(void *dst, void *elem);
 
 /*
 ******************								******************
@@ -50,7 +66,8 @@ int					get_next_line(int fd, char **line);
 void				*ft_memalloc(size_t size);
 char				*ft_itoa(intmax_t n);
 char				*ft_itoa_base(uintmax_t n, uintmax_t base, uintmax_t size);
-char				*ft_strnjoin(char const *s1, char const *s2, char const *s3);
+char				*ft_strnjoin(char const *s1, char const *s2,
+					char const *s3);
 char				**ft_double_malloc(int y, int x);
 char				*ft_strdup(const char *str);
 char				*ft_strjoin(char const *s1, char const *s2);
@@ -96,6 +113,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_isnum(char *str);
 
 /*
 ******************								******************
@@ -105,6 +123,7 @@ int					ft_tolower(int c);
 
 int					ft_sqrt(int n);
 size_t				ft_strlen(const char *str);
+int					strchr_count(char *line, char symbol);
 int					ft_atoi(const char *str);
 char				*ft_strpbrk(const char *s, const char *ch);
 char				*ft_strnpbrk(const char *s, const char *ch, size_t len);

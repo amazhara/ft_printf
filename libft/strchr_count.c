@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   strchr_count.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amazhara <amazhara@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: amazhara <amazhara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/15 15:25:53 by amazhara          #+#    #+#             */
-/*   Updated: 2018/12/15 15:39:32 by amazhara         ###   ########.fr       */
+/*   Created: 2019/04/25 13:47:55 by amazhara          #+#    #+#             */
+/*   Updated: 2019/04/25 13:48:58 by amazhara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t		ft_intlen(intmax_t c)
+int		strchr_count(char *line, char symbol)
 {
-	intmax_t	count;
+	int		i;
+	int		count;
 
+	i = -1;
 	count = 0;
-	if (c < 0)
+	while (line[++i])
 	{
-		c *= -1;
-		count++;
+		if (line[i] == symbol)
+			count++;
 	}
-	while (c /= 10)
-		count++;
-	return (++count);
+	return (count);
 }

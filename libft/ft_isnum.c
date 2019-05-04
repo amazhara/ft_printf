@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amazhara <amazhara@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: amazhara <amazhara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/15 15:25:53 by amazhara          #+#    #+#             */
-/*   Updated: 2018/12/15 15:39:32 by amazhara         ###   ########.fr       */
+/*   Created: 2019/04/24 19:52:29 by amazhara          #+#    #+#             */
+/*   Updated: 2019/04/25 13:47:32 by amazhara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t		ft_intlen(intmax_t c)
+int		ft_isnum(char *str)
 {
-	intmax_t	count;
-
-	count = 0;
-	if (c < 0)
-	{
-		c *= -1;
-		count++;
-	}
-	while (c /= 10)
-		count++;
-	return (++count);
+	if (!str || !*str)
+		return (0);
+	if (*str == '+' || *str == '-')
+		str++;
+	while (*str)
+		if (!ft_isdigit(*str++))
+			return (0);
+	return (1);
 }
